@@ -10,6 +10,9 @@
 		0102B8732D8C09EA00770B6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0102B8722D8C09EA00770B6F /* Foundation.framework */; };
 		0102B8752D8C09F000770B6F /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0102B8742D8C09F000770B6F /* Metal.framework */; };
 		0102B87B2D8C0B7C00770B6F /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0102B87A2D8C0B7C00770B6F /* MetalKit.framework */; };
+		0102B89E2D8C187D00770B6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0102B89D2D8C187D00770B6F /* QuartzCore.framework */; };
+		0102B8A02D8C188500770B6F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0102B89F2D8C188400770B6F /* Cocoa.framework */; };
+		0102B8B12D8C206D00770B6F /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0102B8A12D8C18EA00770B6F /* libglfw.3.4.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -138,6 +141,12 @@
 		0102B8852D8C0DF300770B6F /* MetalKit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MetalKit.hpp; sourceTree = "<group>"; };
 		0102B8862D8C0DF300770B6F /* MetalKitPrivate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MetalKitPrivate.hpp; sourceTree = "<group>"; };
 		0102B8872D8C0DF300770B6F /* MTKView.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MTKView.hpp; sourceTree = "<group>"; };
+		0102B89D2D8C187D00770B6F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0102B89F2D8C188400770B6F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0102B8A12D8C18EA00770B6F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
+		0102B8A92D8C198200770B6F /* glfw3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glfw3.h; sourceTree = "<group>"; };
+		0102B8AA2D8C198200770B6F /* glfw3native.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glfw3native.h; sourceTree = "<group>"; };
+		0102B8AE2D8C204100770B6F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libglfw.3.4.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -153,6 +162,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0102B8B12D8C206D00770B6F /* libglfw.3.4.dylib in Frameworks */,
+				0102B8A02D8C188500770B6F /* Cocoa.framework in Frameworks */,
+				0102B89E2D8C187D00770B6F /* QuartzCore.framework in Frameworks */,
 				0102B87B2D8C0B7C00770B6F /* MetalKit.framework in Frameworks */,
 				0102B8752D8C09F000770B6F /* Metal.framework in Frameworks */,
 				0102B8732D8C09EA00770B6F /* Foundation.framework in Frameworks */,
@@ -170,6 +182,8 @@
 				0102B8702D8C09D800770B6F /* metal-cpp */,
 				0102B8712D8C09E900770B6F /* Frameworks */,
 				0102B8892D8C0DF300770B6F /* metal-cpp-extensions */,
+				0102B8AC2D8C198200770B6F /* includes */,
+				0102B8AF2D8C204100770B6F /* lib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -329,6 +343,9 @@
 		0102B8712D8C09E900770B6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0102B8A12D8C18EA00770B6F /* libglfw.3.4.dylib */,
+				0102B89F2D8C188400770B6F /* Cocoa.framework */,
+				0102B89D2D8C187D00770B6F /* QuartzCore.framework */,
 				0102B87A2D8C0B7C00770B6F /* MetalKit.framework */,
 				0102B8742D8C09F000770B6F /* Metal.framework */,
 				0102B8722D8C09EA00770B6F /* Foundation.framework */,
@@ -368,6 +385,31 @@
 				0102B8882D8C0DF300770B6F /* MetalKit */,
 			);
 			path = "metal-cpp-extensions";
+			sourceTree = "<group>";
+		};
+		0102B8AB2D8C198200770B6F /* GLFW */ = {
+			isa = PBXGroup;
+			children = (
+				0102B8A92D8C198200770B6F /* glfw3.h */,
+				0102B8AA2D8C198200770B6F /* glfw3native.h */,
+			);
+			path = GLFW;
+			sourceTree = "<group>";
+		};
+		0102B8AC2D8C198200770B6F /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				0102B8AB2D8C198200770B6F /* GLFW */,
+			);
+			path = includes;
+			sourceTree = "<group>";
+		};
+		0102B8AF2D8C204100770B6F /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				0102B8AE2D8C204100770B6F /* libglfw.3.4.dylib */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,7 +604,9 @@
 				HEADER_SEARCH_PATHS = (
 					"${PROJECT_DIR}/metal-cpp",
 					"${PROJECT_DIR}/metal-cpp-extensions",
+					"${PROJECT_DIR}/includes",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -575,7 +619,9 @@
 				HEADER_SEARCH_PATHS = (
 					"${PROJECT_DIR}/metal-cpp",
 					"${PROJECT_DIR}/metal-cpp-extensions",
+					"${PROJECT_DIR}/includes",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
