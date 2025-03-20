@@ -7,8 +7,13 @@
 - clone repo
 `git clone https://github.com/Thaparoshan143/Sandbox_Metal-cpp -b vscode+glfw .`
 
-- open project in xcode (terminal command is as)
-`xed .`
+- open in vscode 
+`code .`
+
+**Commands**
+- config and builds from CMakeList `bash config.sh`
+- run the binary executable `bash run.sh`
+- clean the build files `bash clean.sh`
 
 **Requirements**
 - macOS 15.2+
