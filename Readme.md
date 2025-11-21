@@ -1,19 +1,32 @@
 ### Repo for metal-cpp sandbox (CMake build system, configed for vscode)
 
-#Note: This is created on/for Apple Silicon (namely M1, macOS).
+> [!Note]
+> This is created on/for Apple Silicon (namely M1, macOS). Please refer to the Apple developer website for further information, [here](https://developer.apple.com/metal/cpp/)
 
 **How to use**
-
 - clone repo
-`git clone https://github.com/Thaparoshan143/Sandbox_Metal-cpp -b vscode+glfw .`
+```bash
+git clone -b vscode+glfw https://github.com/Thaparoshan143/Sandbox_Metal-cpp path/to/clone
+```
 
 - open in vscode 
-`code .`
+```bash
+code .
+```
 
 **Commands**
-- config and builds from CMakeList `bash config.sh`
-- run the binary executable `bash run.sh`
-- clean the build files `bash clean.sh`
+- config and builds from CMakeList
+```bash
+bash config.sh
+```
+- run the binary executable
+```bash
+bash run.sh
+```
+- clean the build files
+```bash
+bash clean.sh
+```
 
 **Requirements**
 - macOS 15.2+
